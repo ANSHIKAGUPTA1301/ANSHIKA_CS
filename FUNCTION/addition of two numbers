@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+long addition(long p, long q);
+
+int main()
+{
+   long first, second, sum;
+
+    printf("Enter two numbers:\n");
+   scanf("%ld%ld", &first, &second);
+
+   sum = addition(first, second);
+
+   printf("The sum of two numbers is %ld\n", sum);
+
+   return 0;
+}
+
+long addition(long a, long b)
+{
+   long result;
+
+   result = a + b;
+
+   return result;
+}

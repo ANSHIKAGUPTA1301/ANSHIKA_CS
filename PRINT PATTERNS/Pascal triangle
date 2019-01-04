@@ -1,0 +1,43 @@
+/* 
+*       Author Name :   Anshika Gupta
+*       Aim         :   C program to print Pascal triangle which you might have studied while studying Binomial Theorem in Mathematics. 
+*                       A user will enter how many numbers of rows to print.
+*/
+
+
+#include<stdio.h>
+
+int factorial(int);
+
+int main()
+{
+   int i, n, j, k;
+
+   printf("Enter the number of rows you wish to see in pascal triangle\n");
+   scanf("%d",&n);
+
+   for (i = 0; i < n; i++)
+   {
+      for (j = 0; j <= (n - i - 2); j++)
+         printf(" ");
+
+      for (k = 0 ; k <= i; k++)
+         printf("%ld ",factorial(i)/(factorial(k)*factorial(i-k)));
+
+      printf("\n");
+   }
+
+   return 0;
+}
+
+int factorial(int n)
+{
+   int i;
+   int result = 1;
+
+   for (i = 1; i <= n; i++)
+         result = result*i;
+
+   return result;
+}
+
